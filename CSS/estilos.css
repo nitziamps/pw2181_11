@@ -1,0 +1,30 @@
+body{
+	background: pink;
+	/*background: #0000FF;
+	background: rgba(155,40,33);
+	background: rgb(0,0,255);*/
+	color:white;
+
+}
+header{ 
+	border: 1px solid black;
+	text-align: center;
+ }
+
+ header nav ul li
+ {
+	background: orange;
+	border: 1px solid white;
+	border-radius: 5px;
+	display: inline-block;/* <-- para que el texto se haga del mismo tamaño*/
+	width: 100px; 
+ }
+  header nav ul li:hover /*tiene que estar pegado*/
+ {
+	background: black;
+	border: 1px solid orange;
+	border-radius: 5px;
+	display: inline-block;/* <-- para que el texto se haga del mismo tamaño*/
+	width: 100px; 
+ }
+
