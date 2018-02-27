@@ -6,6 +6,16 @@ body{
 	color:white;
 
 }
+
+main{ margin-top: 15px; }
+
+footer{
+	border: 1px solid magenta;
+	font-weight: bold; /*negritas*/
+	padding: 20px;
+	text-align: center;
+
+}
 header{ 
 	border: 1px solid black;
 	text-align: center;
@@ -17,6 +27,9 @@ header{
 	border: 1px solid white;
 	border-radius: 5px;
 	display: inline-block;/* <-- para que el texto se haga del mismo tamaño*/
+	margin-right: 50px;
+	/*margin:0px 50px 0px 0px;*/
+	padding: 5px 10px;
 	width: 100px; 
  }
   header nav ul li:hover /*tiene que estar pegado*/
@@ -25,6 +38,36 @@ header{
 	border: 1px solid orange;
 	border-radius: 5px;
 	display: inline-block;/* <-- para que el texto se haga del mismo tamaño*/
+	padding: 5px 10px;
 	width: 100px; 
  }
+main section article
+{
+	border: 1px dashed magenta;
+	display: inline-block;
+	vertical-align: top;
+	width: 32.65%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
