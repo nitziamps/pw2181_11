@@ -1,0 +1,7 @@
+body{
+	border: 1px solid blue;
+	font-size:16px;/*1em- por la m*/
+	margin:0px auto; /*para mover los margenes de la cada de body*/
+	max-width: 1024px;/*el tamaño en que se ve centrodo todo*/
+
+}
