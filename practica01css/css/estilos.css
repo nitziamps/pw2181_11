@@ -5,3 +5,35 @@ body{
 	max-width: 1024px;/*el tamaño en que se ve centrodo todo*/
 
 }
+header{
+	background: #b3d0e0;/* el color debajo del resplandor*/
+}
+header form{
+	float: right;/*para que flote a la derecha el buscador*/
+	margin-top: -40px;/*negativo para que se suba */
+	margin-right: 20px;/*para recorrer el boton hacia la izquierda*/
+
+}
+header form input{ /*hace referencia a los puros input*/
+	border-radius: 5px;
+}
+header form input[type="button"]/*debe de estar pegado o no funciona/hace referencia a un solo tipo*/
+{
+	color:white; /*color de letra */
+	background: green;/*color de fon*/
+	border:1px solid green;/*el dorde del boton*/
+}
+header nav{
+	background: #026dc6; /*color de fondo*/
+	width: 99%; /*ancho*/
+	border-radius: 5px; /*esquinas redondiadas*/
+	margin:0 auto; /*margen del nav*/
+	padding: 1px 0px; /*para el texto centrado*/
+}
+header nav ul li
+{
+	color:white; /*color de las letras*/
+	display: inline-block; /* para que aparezcan el linea */
+	margin-right: 20px;
+}
+#logo{ margin-top: -150px }
