@@ -50,13 +50,41 @@ header nav ul li
 	text-align: center;
 
 }
-#seccion01 article
+#seccion01 article img
 {
-	border:5px solid rgba(15,150,150,0.4); 
+	border:5px solid rgba(150,150,150,0.5); 
 	width: 98%;
 }
+#seccion02{margin-bottom:50px;}
+#seccion02 article 
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 32.8%;
+}
+/* Puedo poner mas de un selector para distintos atributos*/
+.UnaSeccion,.OtraSeccion{ font-weight: bold; } /*negritas*/
+
+/*Las class de CSS empiezan con punto*/
+.UnaSeccion /*para hacer referencia a una clase*/
+{
+	font-size: 4em;
+}
+.OtraSeccion
+{
+	font-size:2.5em;
+}
+
+.boton
+{
+	background: white;
+	color: blue;
+	border-radius: 5px;
+	border:1px solid gray;
+	margin-left: 130px;
 
 
+}
 
 
 
