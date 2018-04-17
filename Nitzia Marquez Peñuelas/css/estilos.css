@@ -1,0 +1,117 @@
+body
+{
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 1070px;
+	min-width: 1070px;
+	margin-left: 45px;
+	margin-right: 45px;
+
+}
+#logo
+{
+	width: 15%;
+	margin-left: 25px;
+	margin-top: 25px;
+}
+header
+{ 
+	background: white; 
+}
+header input
+{
+	width: 35%;
+	
+}
+header span 
+{
+	float: right;
+	margin-right: -120px;
+	margin-top: 45px;
+
+}
+#canasta
+{
+	width: 65px;
+	margin-right: 100px;
+	float: right;
+	margin-top: 30px;
+}
+.nito
+{
+	font-weight: bold;
+}
+.colorgris
+{
+	color: gray;
+}
+.letracomun
+{
+	font-size: 1.8em;
+}
+header nav
+{
+	width: 99%;
+	margin: 0 auto;
+	padding: 5px 3px;
+	margin-top: 15px;
+	background: #3DC4B6;
+}
+header nav ul li
+{
+	display: inline-block;
+	margin-right: 10px; /*Para que se separen entre ellos en el nav*/
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	border-right: 1.5px solid white;
+	padding-right: 1.5px;
+
+}
+#section1 article
+{
+	display: inline-block;
+}
+#art01
+{
+	width: 45%;
+}
+#playera
+{
+	width: 90%;
+
+}
+#art02
+{
+	background: #3DC4B6 ;
+	width: 55%;
+	margin: top;
+	display: inline-block;
+}
+.colorblanco
+{
+	 color: white; 
+}
+.letrapequeña
+{
+	font-size: 1em;
+}
+#sec02 article
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 23%;
+}
+#playerita{ width:30%; }
+#tenis{ width: 30%; }
+#bolsa{ width: 30%; }
+
+.letranormal{ font-size: 1.5em; }
+
+
+
+
+
+
+
+
