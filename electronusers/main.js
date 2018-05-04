@@ -17,6 +17,8 @@ function muestraPantallaPrincipal()
 		protocol: 'file',
 		slashes: true
 	}));
+	//click derecho, inspeccionar en choreme
+	PantallaPrincipal.webContents.openDevTools();
 	//mostramos la pantalla
 	PantallaPrincipal.show();
 }
