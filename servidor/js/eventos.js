@@ -1,11 +1,10 @@
-
-var inicioApp = fuction()
+var inicioApp = function()
 {
 	var Aceptar = function()
 	{
 		event.preventDefault();
 		var usuario=$("#txtUsuario").val();
-		var clave=$("txtClave").val();
+		var clave=$("#txtClave").val();
 		var parametros="opc=validaentrada"+
 						"&usuario="+usuario+
 						"&clave="+clave+
@@ -17,14 +16,17 @@ var inicioApp = fuction()
 			dataType:"json",
 			url:"php/validaentrada.php",
 			data:parametros,
-			success:fuction(response){
-				if(response.respuesta == true){
-					alert("Bienvenido");
+			success:function(response){
+				if(response.respuesta == true)
+				{
+					//alert("Bienvenido");
+					$("#secInicio").hide("slow");
 				}else{
-					alert("usuario o clave incorrecta")}
+				alert("usuario o clave incorrecta")
+					}
 
 			},
-			error:fuction(xhr,ajaxOptions,thrownError){
+			error:function(xhr,ajaxOptions,thrownError){
 			}
 	
 		});
