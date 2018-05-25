@@ -55,6 +55,8 @@ var inicioApp = function()
 				
 					}else{
 						$("txtNombre").focus();
+						$("txtNombre").val("");
+					$("txtClaveUsuario").val("");
 					}
 
 			},
