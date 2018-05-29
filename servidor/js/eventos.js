@@ -68,16 +68,82 @@ var inicioApp = function()
 		}
 	}
 
+	var Guardar = function(){
+			var usuario =$("#txtUsuario").val();
+			var nombre =$("#txtNombre").val();
+			var clave =$("#txtClaveUsuario").val();
+			var parametros = "opc=guardarUsuario"+"&usuario="+usuario+"&nombre="+nombre+"&clave="+clave+"&aleatorio="+Math.random();
+			if(usuario!="" && nombre !="" && clave!=""){
+
+			$.ajax({
+			cache:false,
+			type: "POST",
+			dataType: "json",
+			url:"php/guardarusuario.php",
+			data: parametros,
+			success: function(response)
+			{
+				if(response.respuesta == true){
+					alert("cambios guardados con exito");
+					$("#frmUsuarios > input").val("");
+					$("#txtNombreUsuario").focus();
+				}else{
+					alert("Ocurrio un error, intente mas tarde");
+				}
+			},
+			error: function(xhr,ajaxOptions,throenError)
+			{
+
+			}
+		});
+			}else{
+				alert("Llene todos los datos");
+			}
+
+		}
+
 	var teclaNombreUsuario = function(tecla){
 		if(tecla.which == 13){
 			//enter
 			buscaUsuario();
 		}
+	var Borrar = function()
+	{
+		var usuario = $("txtNombreUsuario").val();
+		var pregunta = prompt("Seguro de borrar a" +usuario+"? (si/no)","no");
+		var parametros = "opc=borrarusuario"+
+						"&usuario="+usuario+
+						"&aleatorio="+Math.random();
+
+		if (pregunta != null && pregunta == "si") {
+    	$.ajax({
+    		cache:false,
+    		type:"POST",
+    		dataType:"json",
+    		url:"php/borrarusuario.php",
+    		data: parametros,
+    		success: function(response){
+    			if (response.respuesta == true) {
+    				alert("Usuario eliminado")
+    				$("#frmUsuarios>input").val("");
+    				$("#txtNombreUsuario").focus();
+    			}else{
+    				alert("Ocurrio un error,intente mas tarde ")
+    			}
+    		},
+    		error:function(xhr,ajaxOptions,thrownError){
+    		}
+
+    	});
+	}
+}
 	}
 
 
 	$("#btnAceptar").on("click",Aceptar);
 	$("#txtNombreUsuario").on("keypress",teclaNombreUsuario);
+	$("#btnBorrar").on("click",Borrar);
+	$("#btbGuardar").on("click",Guardar);
 	$("#frmUsuarios").hide();
 
 }
