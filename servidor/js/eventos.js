@@ -101,12 +101,38 @@ var inicioApp = function()
 			}
 
 		}
+	var Listado = function(){
+		//ocultamos todas las secciones dentro del main
+		$("main > section").hide("slow");
+		//Aparecer el listado
+		$("#frmListado").show("slow")
+		var parametros="opc=listado"+
+						"&aleatorio="+Math.random();
+		$.ajax({
+    		cache:false,
+    		type:"POST",
+    		dataType:"json",
+    		url:"php/listado.php",
+    		data: parametros,
+    		success: function(response){
+    			if (response.respuesta == true) {
+    				$("#tblListado").append(response.tabla);
+    			}else{
+    				alert("Ocurrio un error,intente mas tarde ")
+    			}
+    		},
+    		error:function(xhr,ajaxOptions,thrownError){
+    		}
+
+    	});
+	}
 
 	var teclaNombreUsuario = function(tecla){
 		if(tecla.which == 13){
 			//enter
 			buscaUsuario();
 		}
+	}
 	var Borrar = function()
 	{
 		var usuario = $("txtNombreUsuario").val();
@@ -136,14 +162,15 @@ var inicioApp = function()
 
     	});
 	}
-}
-	}
+		}
+	
 
 
 	$("#btnAceptar").on("click",Aceptar);
 	$("#txtNombreUsuario").on("keypress",teclaNombreUsuario);
 	$("#btnBorrar").on("click",Borrar);
 	$("#btbGuardar").on("click",Guardar);
+	$("#btnListado").on("click",Listado);
 	$("#frmUsuarios").hide();
 
 }

@@ -30,4 +30,4 @@ switch ($opc) {
 		# code...
 		break;
 }
-?
+?>
